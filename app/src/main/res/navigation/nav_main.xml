@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/firstSceneFragment">
+
+    <fragment
+        android:id="@+id/firstSceneFragment"
+        android:name="com.iebayirli.navigationdemo.ui.first_scene.FirstSceneFragment"
+        android:label="FirstSceneFragment" >
+        <action
+            android:id="@+id/action_firstSceneFragment_to_secondSceneFragment"
+            app:destination="@id/secondSceneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondSceneFragment"
+        android:name="com.iebayirli.navigationdemo.ui.second_scene.SecondSceneFragment"
+        android:label="SecondSceneFragment" >
+        <argument
+            android:name="userId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+</navigation>
